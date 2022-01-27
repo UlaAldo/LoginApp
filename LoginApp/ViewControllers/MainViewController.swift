@@ -14,13 +14,10 @@ class MainViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    @IBOutlet var logInButton: UIButton!
-    @IBOutlet var tipPasswordButton: UIButton!
-    @IBOutlet var tipNameButton: UIButton!
   
 // MARK: - Private Properties
     
-    private let name = "Mentor"
+    private let user = "Mentor"
     private let password = "SWIFT"
 
 // MARK: - Navigation
@@ -34,14 +31,14 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let userName = segue.destination as? EnterViewController else { return }
-        userName.text = "Welcome, \(name)!"
+        guard let enterVC = segue.destination as? EnterViewController else { return }
+        enterVC.name = user
     }
     
 // MARK: - IB Actions
     
     @IBAction func logInButtonPressed() {
-        guard name == nameTextField.text && password == passwordTextField.text else {
+        guard user == nameTextField.text && password == passwordTextField.text else {
             showAlert(with: "Invalid Username or Password", and: "Try again")
             passwordTextField.text = ""
             return
@@ -57,7 +54,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let _ = segue.source as? EnterViewController else { return }
+//        guard let _ = segue.source as? EnterViewController else { return }
         nameTextField.text = ""
         passwordTextField.text = ""
     }
@@ -78,16 +75,16 @@ extension MainViewController : UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    
         if textField == nameTextField {
             passwordTextField.becomeFirstResponder()
-            
         } else {
             passwordTextField.resignFirstResponder()
             logInButtonPressed()
+            performSegue(withIdentifier: "here", sender: nil)
         }
         return true
 

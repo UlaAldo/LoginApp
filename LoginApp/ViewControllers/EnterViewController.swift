@@ -10,13 +10,13 @@ import UIKit
 class EnterViewController: UIViewController {
 
     @IBOutlet var logOutButton: UIButton!
-    @IBOutlet var welcomeText: UITextField!
+    @IBOutlet var welcomeLabel: UILabel!
     
-    var text: String!
+    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeText.text = text
+        welcomeLabel.text = "Welcome, \(name)!"
     }
     
     
