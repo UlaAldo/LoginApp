@@ -17,8 +17,8 @@ class MainViewController: UIViewController {
   
 // MARK: - Private Properties
     
-    private let user = "Mentor"
-    private let password = "SWIFT"
+    private let user = User.getUser()
+
 
 // MARK: - Navigation
     
@@ -31,14 +31,25 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let enterVC = segue.destination as? EnterViewController else { return }
-        enterVC.name = user
+        guard let tabVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabVC.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let enterVC = viewController as? EnterViewController {
+                enterVC.name = user.logIn
+            } else if let navigationVC = viewController as? UINavigationController {
+                let hobbyVC = navigationVC.topViewController as! HobbyViewController
+                hobbyVC.hobby = user
+            
+        }
+
+    }
     }
     
 // MARK: - IB Actions
     
     @IBAction func logInButtonPressed() {
-        guard user == nameTextField.text && password == passwordTextField.text else {
+        guard user.logIn == nameTextField.text && user.password == passwordTextField.text else {
             showAlert(with: "Invalid Username or Password", and: "Try again")
             passwordTextField.text = ""
             return

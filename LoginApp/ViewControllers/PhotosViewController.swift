@@ -10,6 +10,8 @@ import UIKit
 class PhotosViewController: UIViewController {
 
     @IBOutlet var imagesView: [UIImageView]!
+
+    var photo: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +20,10 @@ class PhotosViewController: UIViewController {
             image.layer.cornerRadius = image.frame.width/15
         }
 
-       
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let thxVC = segue.destination as? GratefullViewController else { return }
+        thxVC.thxText = photo
+    }
 
 }

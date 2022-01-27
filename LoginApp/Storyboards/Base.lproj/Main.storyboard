@@ -150,10 +150,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8N-Pt-ZSR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q8N-Pt-ZSR">
                                 <rect key="frame" x="40" y="176" width="334" height="617"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <color key="textColor" red="0.33699327670000001" green="0.14636380869999999" blue="0.91591566800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -194,13 +194,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f6E-Gb-jxb">
                                 <rect key="frame" x="40" y="176" width="334" height="617"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1485.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="qZU-bT-e2p">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="qZU-bT-e2p">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="192.5"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_6274.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UUi-7v-YYl">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="surf.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UUi-7v-YYl">
                                         <rect key="frame" x="0.0" y="212.5" width="334" height="192"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_4936.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-v7-vvG">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-v7-vvG">
                                         <rect key="frame" x="0.0" y="424.5" width="334" height="192.5"/>
                                     </imageView>
                                 </subviews>
@@ -216,7 +216,7 @@
                             <constraint firstItem="f6E-Gb-jxb" firstAttribute="centerX" secondItem="0bZ-tD-h0a" secondAttribute="centerX" id="pBT-aM-GoQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Photos" leftItemsSupplementBackButton="YES" id="NUu-RH-pQB">
+                    <navigationItem key="navigationItem" title="Photos" id="NUu-RH-pQB">
                         <barButtonItem key="backBarButtonItem" title="back" id="YSj-bn-Az3"/>
                         <barButtonItem key="rightBarButtonItem" image="arrowshape.turn.up.forward" catalog="system" id="YVY-LS-F5h">
                             <color key="tintColor" red="0.91591566800000002" green="0.50813620930000003" blue="0.37589941859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -238,14 +238,32 @@
         <!--Gratefullness-->
         <scene sceneID="V2K-cn-MSl">
             <objects>
-                <viewController id="gQx-4v-giL" sceneMemberID="viewController">
+                <viewController id="gQx-4v-giL" customClass="GratefullViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPe-FM-wey">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i9B-hM-NBa">
+                                <rect key="frame" x="40" y="176" width="334" height="617"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.33699327670000001" green="0.14636380869999999" blue="0.91591566800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1bB-wJ-UVn"/>
                         <color key="backgroundColor" red="0.79730634730000005" green="0.87749854579999997" blue="0.89922329509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1bB-wJ-UVn" firstAttribute="trailing" secondItem="i9B-hM-NBa" secondAttribute="trailing" constant="40" id="F21-ff-CCk"/>
+                            <constraint firstItem="1bB-wJ-UVn" firstAttribute="bottom" secondItem="i9B-hM-NBa" secondAttribute="bottom" constant="20" id="Gfl-VT-2Cw"/>
+                            <constraint firstItem="i9B-hM-NBa" firstAttribute="leading" secondItem="1bB-wJ-UVn" secondAttribute="leading" constant="40" id="UWE-ez-yJb"/>
+                            <constraint firstItem="i9B-hM-NBa" firstAttribute="top" secondItem="1bB-wJ-UVn" secondAttribute="top" constant="20" id="jYC-3C-Siq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gratefullness" id="06F-kc-oYM"/>
+                    <connections>
+                        <outlet property="textView" destination="i9B-hM-NBa" id="V7C-Qs-Xf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8N8-FZ-Yjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,11 +314,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_1485.JPG" width="985" height="656.6400146484375"/>
-        <image name="IMG_4936.jpg" width="972.239990234375" height="649.44000244140625"/>
-        <image name="IMG_6274.jpg" width="3269" height="2142"/>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="me.JPG" width="985" height="656.6400146484375"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="surf.jpg" width="3269" height="2142"/>
+        <image name="we.jpg" width="972.239990234375" height="649.44000244140625"/>
     </resources>
 </document>

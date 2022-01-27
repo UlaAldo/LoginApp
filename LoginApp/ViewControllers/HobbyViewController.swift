@@ -15,13 +15,10 @@ class HobbyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         hobbyLabel.text = hobby.person.hobby
-
     }
-    
-
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let photoVC = segue.destination as? PhotosViewController else { return }
+        photoVC.photo = hobby
+    }
 }
