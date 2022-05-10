@@ -19,11 +19,10 @@ class PhotosViewController: UIViewController {
         for image in imagesView {
             image.layer.cornerRadius = image.frame.width/15
         }
-
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let thxVC = segue.destination as? GratefullViewController else { return }
+        guard let thxVC = segue.destination as? GratefulViewController else { return }
         thxVC.thxText = photo
     }
-
 }

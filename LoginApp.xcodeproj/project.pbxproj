@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C10D8DFD27A2365200ECA5BB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D8DFC27A2365200ECA5BB /* PhotosViewController.swift */; };
 		C10D8DFF27A247CF00ECA5BB /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D8DFE27A247CF00ECA5BB /* HobbyViewController.swift */; };
-		C111547D27A286CF0027A129 /* GratefullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111547C27A286CF0027A129 /* GratefullViewController.swift */; };
+		C111547D27A286CF0027A129 /* GratefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111547C27A286CF0027A129 /* GratefulViewController.swift */; };
 		C136195F279950CD002055FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136195E279950CD002055FD /* AppDelegate.swift */; };
 		C1361961279950CD002055FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1361960279950CD002055FD /* SceneDelegate.swift */; };
 		C1361963279950CD002055FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1361962279950CD002055FD /* MainViewController.swift */; };
@@ -17,13 +17,13 @@
 		C1361968279950CD002055FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1361967279950CD002055FD /* Assets.xcassets */; };
 		C136196B279950CD002055FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1361969279950CD002055FD /* LaunchScreen.storyboard */; };
 		C136197327996CDB002055FD /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136197227996CDB002055FD /* EnterViewController.swift */; };
-		C1CA3ECE279FE48000E4A245 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA3ECD279FE48000E4A245 /* File.swift */; };
+		C1CA3ECE279FE48000E4A245 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA3ECD279FE48000E4A245 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C10D8DFC27A2365200ECA5BB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotosViewController.swift; path = LoginApp/ViewControllers/PhotosViewController.swift; sourceTree = SOURCE_ROOT; };
 		C10D8DFE27A247CF00ECA5BB /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
-		C111547C27A286CF0027A129 /* GratefullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratefullViewController.swift; sourceTree = SOURCE_ROOT; };
+		C111547C27A286CF0027A129 /* GratefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratefulViewController.swift; sourceTree = SOURCE_ROOT; };
 		C136195B279950CD002055FD /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C136195E279950CD002055FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1361960279950CD002055FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 		C136196A279950CD002055FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C136196C279950CD002055FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C136197227996CDB002055FD /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
-		C1CA3ECD279FE48000E4A245 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C1CA3ECD279FE48000E4A245 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 				C136197227996CDB002055FD /* EnterViewController.swift */,
 				C10D8DFE27A247CF00ECA5BB /* HobbyViewController.swift */,
 				C10D8DFC27A2365200ECA5BB /* PhotosViewController.swift */,
-				C111547C27A286CF0027A129 /* GratefullViewController.swift */,
+				C111547C27A286CF0027A129 /* GratefulViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,7 +109,6 @@
 		C1CA3ECC279FDEB300E4A245 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C1CA3ED227A12E5300E4A245 /* Photos */,
 				C1361967279950CD002055FD /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -118,16 +117,9 @@
 		C1CA3ECF279FE48F00E4A245 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C1CA3ECD279FE48000E4A245 /* File.swift */,
+				C1CA3ECD279FE48000E4A245 /* Person.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C1CA3ED227A12E5300E4A245 /* Photos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,12 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1CA3ECE279FE48000E4A245 /* File.swift in Sources */,
+				C1CA3ECE279FE48000E4A245 /* Person.swift in Sources */,
 				C1361963279950CD002055FD /* MainViewController.swift in Sources */,
 				C10D8DFF27A247CF00ECA5BB /* HobbyViewController.swift in Sources */,
 				C136197327996CDB002055FD /* EnterViewController.swift in Sources */,
 				C10D8DFD27A2365200ECA5BB /* PhotosViewController.swift in Sources */,
-				C111547D27A286CF0027A129 /* GratefullViewController.swift in Sources */,
+				C111547D27A286CF0027A129 /* GratefulViewController.swift in Sources */,
 				C136195F279950CD002055FD /* AppDelegate.swift in Sources */,
 				C1361961279950CD002055FD /* SceneDelegate.swift in Sources */,
 			);

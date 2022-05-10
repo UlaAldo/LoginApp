@@ -8,7 +8,7 @@
 import UIKit
 
 class EnterViewController: UIViewController {
-
+    
     @IBOutlet var logOutButton: UIButton!
     @IBOutlet var welcomeLabel: UILabel!
     
@@ -18,6 +18,4 @@ class EnterViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(name)!"
     }
-    
-    
 }

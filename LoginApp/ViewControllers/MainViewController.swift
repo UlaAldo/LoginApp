@@ -19,7 +19,6 @@ class MainViewController: UIViewController {
     
     private let user = User.getUser()
 
-
 // MARK: - Navigation
     
     override func viewDidLoad() {
@@ -40,10 +39,8 @@ class MainViewController: UIViewController {
             } else if let navigationVC = viewController as? UINavigationController {
                 let hobbyVC = navigationVC.topViewController as! HobbyViewController
                 hobbyVC.hobby = user
-            
+            }
         }
-
-    }
     }
     
 // MARK: - IB Actions
@@ -65,7 +62,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-//        guard let _ = segue.source as? EnterViewController else { return }
         nameTextField.text = ""
         passwordTextField.text = ""
     }
@@ -98,8 +94,7 @@ extension MainViewController : UITextFieldDelegate {
             performSegue(withIdentifier: "here", sender: nil)
         }
         return true
-
-        }
+    }
 }
 
 
